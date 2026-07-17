@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HomeHubConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/007_home_hub/resources/home_hub_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+home_id = &"primary_home"
+display_name = "HYDRA RESIDENCE"
+refresh_interval_seconds = 2.0
+refresh_while_hidden = false
+show_occupancy = true
+show_security = true
+show_energy = true
+show_room_status = true
