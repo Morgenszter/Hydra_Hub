@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cxcw2ddg0dcyf"]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="PackedScene" path="res://packages/020_final_hud/scenes/final_hud.tscn" id="1"]
 
-[node name="FinalHudDemo" type="Control" unique_id=2072365543]
+[node name="FinalHudDemo" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,5 +10,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="FinalHud" parent="." unique_id=1599274520 instance=ExtResource("1")]
+[node name="FinalHud" parent="." instance=ExtResource("1")]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
