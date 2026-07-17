@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VoiceHubConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/006_voice_hub/resources/voice_hub_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+capture_enabled = false
+input_bus_name = &"VoiceCapture"
+sample_rate_hz = 48000
+channel_count = 1
+maximum_capture_seconds = 15.0
+activation_threshold_db = -32.0
+silence_timeout_seconds = 0.75
+minimum_utterance_seconds = 0.25
+speech_to_text_provider_id = &"disabled"
+text_to_speech_provider_id = &"disabled"
+language_code = "pl-PL"
+allow_external_processing = false
+show_live_level = true
+show_transcription_preview = true
