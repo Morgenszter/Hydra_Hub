@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://packages/003_widget_library/scripts/hydra_button.gd" id="1"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_button"]
+gradient = Gradient(0, 0.5, 0.5, 1, [0, 1], [Color(0.04, 0.17, 0.24, 1), Color(0.01, 0.05, 0.08, 1)])
+width = 256
+height = 64
+
+[node name="HydraButton" type="Control"]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 64.0
+mouse_filter = 0
+script = ExtResource("1")
+widget_id = &"hydra_button"
+action_id = &"default_action"
+
+[node name="Background" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture_button")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = -16.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "ACTION"
+fit_content = true
+scroll_active = false

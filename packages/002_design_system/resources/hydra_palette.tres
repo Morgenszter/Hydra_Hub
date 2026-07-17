@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="HydraPalette" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/002_design_system/scripts/hydra_palette.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+background = Color(0.0117647, 0.0313725, 0.0509804, 1)
+panel = Color(0.027451, 0.0901961, 0.133333, 1)
+panel_highlight = Color(0.0509804, 0.168627, 0.235294, 1)
+hologram_blue = Color(0.196078, 0.847059, 1, 1)
+hologram_blue_dim = Color(0.0705882, 0.392157, 0.478431, 1)
+hologram_white = Color(0.85098, 0.972549, 1, 1)
+gold = Color(0.839216, 0.666667, 0.282353, 1)
+gold_dim = Color(0.431373, 0.337255, 0.152941, 1)
+success = Color(0.333333, 0.94902, 0.639216, 1)
+warning = Color(1, 0.74902, 0.278431, 1)
+danger = Color(1, 0.309804, 0.384314, 1)
+disabled = Color(0.25098, 0.317647, 0.356863, 1)

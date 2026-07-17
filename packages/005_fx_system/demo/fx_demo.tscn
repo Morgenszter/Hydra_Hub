@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://packages/005_fx_system/scenes/crt_overlay.tscn" id="1"]
+
+[node name="FxDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.03, 0.05, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 960.0
+offset_bottom = 160.0
+bbcode_enabled = true
+text = "[font_size=36][color=#32d8ff]HYDRA CRT COMPOSITE[/color][/font_size]"
+fit_content = true
+scroll_active = false
+
+[node name="CrtOverlay" parent="." instance=ExtResource("1")]
+layout_mode = 1

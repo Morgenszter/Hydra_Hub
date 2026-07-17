@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HydraAnimationProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/004_animation_system/scripts/hydra_animation_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+fast_duration = 0.12
+standard_duration = 0.24
+slow_duration = 0.48
+slide_distance = 32.0
+reduced_motion = false
