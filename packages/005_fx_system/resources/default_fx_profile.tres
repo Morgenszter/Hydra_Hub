@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HydraFxProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/005_fx_system/scripts/hydra_fx_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+crt_enabled = true
+scanlines_enabled = true
+noise_enabled = true
+vignette_enabled = true
+scanline_intensity = 0.18
+noise_intensity = 0.035
+vignette_intensity = 0.35
+glow_intensity = 1.25
