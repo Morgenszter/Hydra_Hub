@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BootLoaderConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/018_boot_loader/resources/boot_loader_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+target_scene_path = "res://hud_scene.tscn"
+completion_delay_seconds = 0.35
+start_automatically = true
+stop_on_critical_failure = true
+allow_retry = true
+change_scene_after_completion = true
+minimum_step_display_seconds = 0.05
+show_completed_steps = true

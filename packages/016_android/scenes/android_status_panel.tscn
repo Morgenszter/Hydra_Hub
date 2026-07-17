@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/016_android/scripts/presentation/android_status_panel.gd" id="1"]
+
+[node name="AndroidStatusPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 840.0
+offset_bottom = 760.0
+mouse_filter = 1
+script = ExtResource("1")
+panel_id = &"android_status_panel"
+starts_open = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0313725, 0.0509804, 0.97)
+
+[node name="HeaderAccent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 24.0
+offset_right = 34.0
+offset_bottom = 94.0
+color = Color(0.839216, 0.666667, 0.282353, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 20.0
+offset_right = 720.0
+offset_bottom = 60.0
+bbcode_enabled = true
+text = "[font_size=30][color=#32d8ff]ANDROID PLATFORM[/color][/font_size]"
+fit_content = true
+scroll_active = false
+
+[node name="Subtitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 62.0
+offset_right = 780.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[color=#6e8794]MOBILE RUNTIME BRIDGE  //  CHANNEL 016[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="PlatformLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 126.0
+offset_right = 780.0
+offset_bottom = 158.0
+text = "PLATFORM  //  UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="ModelLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 168.0
+offset_right = 780.0
+offset_bottom = 200.0
+text = "MODEL  //  UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="SdkLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 210.0
+offset_right = 780.0
+offset_bottom = 242.0
+text = "ANDROID SDK  //  0"
+fit_content = true
+scroll_active = false
+
+[node name="CapabilityOutput" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 270.0
+offset_right = 780.0
+offset_bottom = 650.0
+bbcode_enabled = true
+text = "[color=#40515b]NO PLATFORM DATA[/color]"
+scroll_active = false
+
+[node name="ErrorLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 54.0
+offset_top = 674.0
+offset_right = 780.0
+offset_bottom = 742.0
+bbcode_enabled = true
+text = "[color=#ff4f62]ANDROID OPERATION FAILURE[/color]"
+scroll_active = false
