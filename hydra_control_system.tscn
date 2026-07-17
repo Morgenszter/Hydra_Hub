@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d3v02p3ik6y8q"]
+
+[ext_resource type="Script" uid="uid://c66ttxgh48vp6" path="res://scripts/hud_controller.gd" id="1_m8ws4"]
+[ext_resource type="Texture2D" uid="uid://b6qqcg41h31tw" path="res://assets/texture/HUD/ChatGeneration/Ramki/Tło.png" id="2_r61ac"]
+[ext_resource type="Script" uid="uid://bcpfl4vtoomvg" path="res://frame_scaler.gd" id="3_cyyt0"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_5qmfh"]
+
+[node name="Hydra Control System" type="Control" unique_id=1619111458]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HUD" type="Control" parent="." unique_id=1865032511]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+localize_numeral_system = false
+script = ExtResource("1_m8ws4")
+
+[node name="Frame" type="NinePatchRect" parent="HUD" unique_id=1794901759]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_r61ac")
+region_rect = Rect2(5.477783, 7.10495, 2016.7346, 1142.3109)
+patch_margin_left = 100
+patch_margin_top = 100
+patch_margin_right = 100
+patch_margin_bottom = 100
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("3_cyyt0")
+
+[node name="MicPlayer" type="AudioStreamPlayer" parent="HUD" unique_id=1953017543]
+stream = SubResource("AudioStreamMicrophone_5qmfh")
+autoplay = true
+bus = &"Mic"

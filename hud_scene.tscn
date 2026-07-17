@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://8672wrt67k1e"]
+
+[ext_resource type="Texture2D" uid="uid://x20rkvpylfys" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/top_bar.png" id="1_f8kgx"]
+[ext_resource type="Texture2D" uid="uid://cry2pe8utyocr" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/bottom_bar.png" id="2_exj37"]
+[ext_resource type="Texture2D" uid="uid://bj4w0yymwmsaj" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/left_bar.png" id="3_2sqqr"]
+[ext_resource type="Texture2D" uid="uid://b4sh47xypu478" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/right_bar.png" id="4_xgfqt"]
+[ext_resource type="Texture2D" uid="uid://b8fntbbjatlho" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/corner_tl.png" id="5_1nej0"]
+[ext_resource type="Texture2D" uid="uid://cujfi36xelfl0" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/corner_tr.png" id="6_bxgl6"]
+[ext_resource type="Texture2D" uid="uid://dryatp24mem5" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/corner_bl.png" id="7_ot522"]
+[ext_resource type="Texture2D" uid="uid://bthpo8gj40eyr" path="res://assets/texture/HUD/ChatGeneration/Ramki/hud_assets_pixel_perfect/corner_br.png" id="8_42pld"]
+
+[node name="HUD" type="Control" unique_id=1679260072]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="TextureRect" parent="." unique_id=186572697]
+layout_mode = 0
+offset_right = 1626.0
+offset_bottom = 182.0
+texture = ExtResource("1_f8kgx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bottom" type="TextureRect" parent="." unique_id=1097991657]
+layout_mode = 0
+texture = ExtResource("2_exj37")
+stretch_mode = 2
+
+[node name="Left" type="TextureRect" parent="." unique_id=925904705]
+layout_mode = 0
+texture = ExtResource("3_2sqqr")
+stretch_mode = 2
+
+[node name="Right" type="TextureRect" parent="." unique_id=2000764415]
+layout_mode = 0
+texture = ExtResource("4_xgfqt")
+stretch_mode = 2
+
+[node name="CornerTL" type="TextureRect" parent="." unique_id=593243994]
+layout_mode = 0
+texture = ExtResource("5_1nej0")
+
+[node name="CornerTR" type="TextureRect" parent="." unique_id=1839489822]
+layout_mode = 0
+texture = ExtResource("6_bxgl6")
+
+[node name="CornerBL" type="TextureRect" parent="." unique_id=1137470950]
+layout_mode = 0
+texture = ExtResource("7_ot522")
+
+[node name="CornerBR" type="TextureRect" parent="." unique_id=2067204768]
+layout_mode = 0
+texture = ExtResource("8_42pld")

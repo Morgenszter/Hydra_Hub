@@ -1,0 +1,580 @@
+[gd_scene format=3 uid="uid://de14xmjx1138v"]
+
+[ext_resource type="Texture2D" uid="uid://b6qqcg41h31tw" path="res://assets/texture/HUD/ChatGeneration/Ramki/Tło.png" id="1_g0idd"]
+[ext_resource type="Script" uid="uid://c66ttxgh48vp6" path="res://scripts/hud_controller.gd" id="1_lhnvt"]
+[ext_resource type="Texture2D" uid="uid://bt1qillelem00" path="res://assets/texture/hydra_icon.png" id="2_wq1ke"]
+[ext_resource type="Texture2D" uid="uid://d26n0xv2plguo" path="res://assets/texture/HUD/ChatGeneration/Ramki/Ramka2.png" id="3_4c8q1"]
+[ext_resource type="Script" uid="uid://4kad8bnfifd0" path="res://scripts/hud_terminal.gd" id="4_wevqc"]
+[ext_resource type="FontFile" uid="uid://cr7vn1381yomw" path="res://assets/fonts/Orbitron-ExtraBold.ttf" id="5_24prs"]
+[ext_resource type="Texture2D" uid="uid://b15anpb4y2pql" path="res://assets/texture/HUD/cogitator_texture_pack_001/S01_CRT_Glass_Base.png" id="6_q43pb"]
+[ext_resource type="Texture2D" uid="uid://vqwmnfw0isi0" path="res://assets/texture/HUD/ChatGeneration/Ramki/Ramka9.png" id="6_u6r4p"]
+[ext_resource type="Texture2D" uid="uid://c0rued4mo7uvr" path="res://assets/texture/HUD/ChatGeneration/Ramki/Ramka7.png" id="7_c3f82"]
+[ext_resource type="Script" uid="uid://c314wknmy5cgc" path="res://scripts/terminal_command_input.gd" id="7_u6r4p"]
+[ext_resource type="Shader" uid="uid://cd6baeww3vw5n" path="res://ui/shaders/terminal_fx.gdshader" id="8_c3f82"]
+[ext_resource type="Script" uid="uid://77jkqn37gnfy" path="res://scripts/terminal_fx.gd" id="9_2sdqs"]
+[ext_resource type="Shader" uid="uid://gqsabk7xjvew" path="res://ui/shaders/bottom_line_fx.gdshader" id="10_c3f82"]
+[ext_resource type="Script" uid="uid://cbcrwtnsoycjt" path="res://scripts/bottom_line_fx.gd" id="10_u6r4p"]
+[ext_resource type="Texture2D" uid="uid://bfgfi7yfll5yc" path="res://assets/texture/Hydra-texturepack2/hydra_pack2_asset17_transparent_x2.png" id="13_78alb"]
+[ext_resource type="Texture2D" uid="uid://bsedpmhwvj2db" path="res://assets/texture/HUD/cogitator_texture_pack_001/S02_CRT_Scanline_Grid.png" id="14_1vxe8"]
+[ext_resource type="Texture2D" uid="uid://d1ad86c5miflv" path="res://assets/texture/HUD/cogitator_texture_pack_001/S04_Phosphor_Bloom_Smear.png" id="16_s55oi"]
+[ext_resource type="Texture2D" uid="uid://db5fl3fkxfim6" path="res://assets/texture/HUD/cogitator_texture_pack_001/S06_Amber_Warning_Bleed.png" id="17_hs5pe"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2sdqs"]
+load_path = "res://.godot/imported/Ramka9.png-8b9d4d117076dd77ff6c44e3ac7d9cd4.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5qmfh"]
+shader = ExtResource("8_c3f82")
+shader_parameter/phosphor_color = Color(0.3, 1, 0.72, 1)
+shader_parameter/tint_strength = 0.08
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.04
+shader_parameter/scanline_count = 420.0
+shader_parameter/scanline_strength = 0.055
+shader_parameter/scanline_speed = 0.12
+shader_parameter/flicker_strength = 0.018
+shader_parameter/flicker_rate = 32.0
+shader_parameter/noise_strength = 0.012
+shader_parameter/noise_rate = 26.0
+shader_parameter/noise_resolution = 520.0
+shader_parameter/vignette_strength = 0.12
+shader_parameter/sweep_speed = 0.1
+shader_parameter/sweep_width = 0.035
+shader_parameter/sweep_strength = 0.075
+shader_parameter/glitch_amount = 0.0
+shader_parameter/glitch_band_y = 0.5
+shader_parameter/glitch_band_height = 0.06
+shader_parameter/glitch_softness = 0.012
+shader_parameter/glitch_frequency = 55.0
+shader_parameter/chromatic_amount = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvjv6"]
+shader = ExtResource("10_c3f82")
+shader_parameter/base_color = Color(0.12, 0.8, 0.62, 1)
+shader_parameter/accent_color = Color(0.45, 1, 0.82, 1)
+shader_parameter/warning_color = Color(1, 0.68, 0.2, 1)
+shader_parameter/error_color = Color(1, 0.18, 0.25, 1)
+shader_parameter/opacity = 0.38
+shader_parameter/line_width = 0.055
+shader_parameter/edge_glow_width = 0.18
+shader_parameter/horizontal_fade = 0.08
+shader_parameter/sweep_speed = 0.42
+shader_parameter/sweep_width = 0.11
+shader_parameter/sweep_strength = 1.15
+shader_parameter/pulse_speed = 1.8
+shader_parameter/pulse_strength = 0.16
+shader_parameter/noise_strength = 0.025
+shader_parameter/noise_rate = 35.0
+shader_parameter/activity = 0.25
+shader_parameter/submit_pulse = 0.0
+shader_parameter/alert_level = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q43pb"]
+shader = ExtResource("8_c3f82")
+shader_parameter/phosphor_color = Color(0.22, 1, 0.72, 1)
+shader_parameter/tint_strength = 0.08
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.04
+shader_parameter/scanline_count = 420.0
+shader_parameter/scanline_strength = 0.055
+shader_parameter/scanline_speed = 0.14
+shader_parameter/flicker_strength = 0.014
+shader_parameter/flicker_rate = 32.0
+shader_parameter/noise_strength = 0.01
+shader_parameter/noise_rate = 26.0
+shader_parameter/noise_resolution = 520.0
+shader_parameter/vignette_strength = 0.12
+shader_parameter/sweep_speed = 0.1
+shader_parameter/sweep_width = 0.035
+shader_parameter/sweep_strength = 0.075
+shader_parameter/glitch_amount = 0.0
+shader_parameter/glitch_band_y = 0.5
+shader_parameter/glitch_band_height = 0.06
+shader_parameter/glitch_softness = 0.012
+shader_parameter/glitch_frequency = 55.0
+shader_parameter/chromatic_amount = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_78alb"]
+shader = ExtResource("8_c3f82")
+shader_parameter/phosphor_color = Color(0.22, 1, 0.72, 1)
+shader_parameter/tint_strength = 0.08
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.04
+shader_parameter/scanline_count = 420.0
+shader_parameter/scanline_strength = 0.055
+shader_parameter/scanline_speed = 0.14
+shader_parameter/flicker_strength = 0.014
+shader_parameter/flicker_rate = 32.0
+shader_parameter/noise_strength = 0.01
+shader_parameter/noise_rate = 26.0
+shader_parameter/noise_resolution = 520.0
+shader_parameter/vignette_strength = 0.12
+shader_parameter/sweep_speed = 0.1
+shader_parameter/sweep_width = 0.035
+shader_parameter/sweep_strength = 0.075
+shader_parameter/glitch_amount = 0.0
+shader_parameter/glitch_band_y = 0.5
+shader_parameter/glitch_band_height = 0.06
+shader_parameter/glitch_softness = 0.012
+shader_parameter/glitch_frequency = 55.0
+shader_parameter/chromatic_amount = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1vxe8"]
+shader = ExtResource("8_c3f82")
+shader_parameter/phosphor_color = Color(0.22, 1, 0.72, 1)
+shader_parameter/tint_strength = 0.08
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.04
+shader_parameter/scanline_count = 420.0
+shader_parameter/scanline_strength = 0.055
+shader_parameter/scanline_speed = 0.14
+shader_parameter/flicker_strength = 0.014
+shader_parameter/flicker_rate = 32.0
+shader_parameter/noise_strength = 0.01
+shader_parameter/noise_rate = 26.0
+shader_parameter/noise_resolution = 520.0
+shader_parameter/vignette_strength = 0.12
+shader_parameter/sweep_speed = 0.1
+shader_parameter/sweep_width = 0.035
+shader_parameter/sweep_strength = 0.075
+shader_parameter/glitch_amount = 0.0
+shader_parameter/glitch_band_y = 0.5
+shader_parameter/glitch_band_height = 0.06
+shader_parameter/glitch_softness = 0.012
+shader_parameter/glitch_frequency = 55.0
+shader_parameter/chromatic_amount = 0.0
+
+[node name="HUD" type="Control" unique_id=1555182945]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhnvt")
+
+[node name="Backround" type="TextureRect" parent="." unique_id=1330331567]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g0idd")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Backround" unique_id=1602825555]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -315.0
+offset_top = -319.0
+offset_right = -148.0
+offset_bottom = -160.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_wq1ke")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/NinePatchRect" unique_id=290513593]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -22.0
+offset_right = 183.0
+offset_bottom = 173.0
+texture = ExtResource("3_4c8q1")
+expand_mode = 1
+flip_h = true
+flip_v = true
+
+[node name="Ramka_1_Central" type="Control" parent="." unique_id=1871510781]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -243.0
+offset_right = 250.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_wevqc")
+
+[node name="ScreenTexture" type="TextureRect" parent="Ramka_1_Central" unique_id=19207285]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -54.0
+offset_right = -64.0
+offset_bottom = -143.0
+mouse_filter = 2
+texture = ExtResource("6_q43pb")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="Ramka_1_Central" unique_id=1833661815]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -102.0
+offset_right = -27.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_2sdqs")
+expand_mode = 1
+
+[node name="BootText" type="RichTextLabel" parent="Ramka_1_Central" unique_id=176290216]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = -54.0
+offset_right = -84.0
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(7.099286e-07, 0.39123017, 0, 0.95686275)
+theme_override_constants/line_separation = 5
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("5_24prs")
+theme_override_font_sizes/normal_font_size = 26
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TerminalLog" type="RichTextLabel" parent="Ramka_1_Central" unique_id=1564268655]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+offset_right = -56.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_visual_only = false
+mouse_filter = 2
+scroll_following = true
+scroll_following_visible_characters = true
+
+[node name="CommandPrompt" type="Label" parent="Ramka_1_Central" unique_id=1915832251]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -61.0
+offset_right = 58.0
+offset_bottom = -21.0
+
+[node name="CommandInput" type="LineEdit" parent="Ramka_1_Central" unique_id=1471131227]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024
+anchor_top = 0.82500005
+anchor_right = 1.0
+anchor_bottom = 0.88900006
+offset_top = 0.049987793
+offset_right = -43.0
+offset_bottom = -0.054016113
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_u6r4p")
+
+[node name="TerminalFX" type="ColorRect" parent="Ramka_1_Central" unique_id=329829920]
+z_index = 2
+material = SubResource("ShaderMaterial_5qmfh")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -54.0
+offset_right = -56.0
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_2sdqs")
+
+[node name="BottomLineFX" type="ColorRect" parent="Ramka_1_Central" unique_id=435995246]
+z_index = 2
+material = SubResource("ShaderMaterial_mvjv6")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = 401.0
+offset_right = -43.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("10_u6r4p")
+
+[node name="RevealLine" type="ColorRect" parent="Ramka_1_Central" unique_id=1374273571]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.813
+anchor_right = 1.0
+anchor_bottom = 0.813
+offset_top = -2.1180115
+offset_right = -56.0
+offset_bottom = -0.118011475
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 1, 0.8352941, 1)
+
+[node name="Ramka_2_LeftCornerBottom" type="Control" parent="." unique_id=216710239]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 260.0
+offset_top = -567.0
+offset_right = 617.0
+offset_bottom = -182.0
+grow_vertical = 0
+
+[node name="ScreenTexture" type="TextureRect" parent="Ramka_2_LeftCornerBottom" unique_id=909813489]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 3.0
+offset_right = -49.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_78alb")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="Ramka_2_LeftCornerBottom" unique_id=101480827]
+z_index = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -382.0
+offset_right = 357.0
+grow_vertical = 0
+texture = ExtResource("3_4c8q1")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="CornerFrameFX" type="ColorRect" parent="Ramka_2_LeftCornerBottom" unique_id=1948603276]
+z_index = 1
+material = SubResource("ShaderMaterial_q43pb")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 31.0
+offset_right = -30.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_2sdqs")
+
+[node name="Ramka_3_RightTop" type="Control" parent="." unique_id=2015674628]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -698.0
+offset_top = 195.0
+offset_right = -241.0
+offset_bottom = 719.0
+grow_horizontal = 0
+
+[node name="ScreenTexture" type="TextureRect" parent="Ramka_3_RightTop" unique_id=297950078]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 48.0
+offset_right = -48.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_q43pb")
+expand_mode = 1
+
+[node name="ScreenBlendTexture" type="TextureRect" parent="Ramka_3_RightTop" unique_id=877286740]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -41.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_1vxe8")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="Ramka_3_RightTop" unique_id=872603218]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_right = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_u6r4p")
+expand_mode = 1
+
+[node name="CornerFrameFX" type="ColorRect" parent="Ramka_3_RightTop" unique_id=2082871249]
+z_index = 1
+material = SubResource("ShaderMaterial_78alb")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 48.0
+offset_right = -48.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_2sdqs")
+
+[node name="BottomLineFX" type="ColorRect" parent="Ramka_3_RightTop" unique_id=1280574964]
+z_index = 2
+material = SubResource("ShaderMaterial_mvjv6")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 467.0
+offset_right = -31.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("10_u6r4p")
+
+[node name="RevealLine" type="ColorRect" parent="Ramka_3_RightTop" unique_id=1245600707]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.813
+anchor_right = 1.0
+anchor_bottom = 0.813
+offset_left = 14.0
+offset_top = 91.987976
+offset_right = -41.0
+offset_bottom = 93.987976
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 1, 0.8352941, 1)
+
+[node name="CommandInput" type="LineEdit" parent="Ramka_3_RightTop" unique_id=724149584]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024
+anchor_top = 0.82500005
+anchor_right = 1.0
+anchor_bottom = 0.88900006
+offset_left = 10.968018
+offset_top = 50.700012
+offset_right = -30.99997
+offset_bottom = 48.16397
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_u6r4p")
+
+[node name="Ramka_6_LeftTopCorner" type="Control" parent="." unique_id=800536812]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScreenTexture" type="TextureRect" parent="Ramka_6_LeftTopCorner" unique_id=154265915]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 275.0
+offset_top = 226.0
+offset_right = 577.0
+offset_bottom = 399.0
+mouse_filter = 2
+texture = ExtResource("16_s55oi")
+expand_mode = 1
+
+[node name="ScreenBlendTexture" type="TextureRect" parent="Ramka_6_LeftTopCorner" unique_id=1833880068]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 275.0
+offset_top = 226.0
+offset_right = 577.0
+offset_bottom = 399.0
+mouse_filter = 2
+texture = ExtResource("17_hs5pe")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="Ramka_6_LeftTopCorner" unique_id=49727687]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 235.0
+offset_top = 195.0
+offset_right = 611.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_c3f82")
+expand_mode = 1
+
+[node name="CornerFrameFX" type="ColorRect" parent="Ramka_6_LeftTopCorner" unique_id=656223781]
+z_index = 1
+material = SubResource("ShaderMaterial_1vxe8")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 275.0
+offset_top = 226.0
+offset_right = 577.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_2sdqs")
