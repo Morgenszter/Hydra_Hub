@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://packages/011_ai_system/scripts/presentation/ai_console_panel.gd" id="1"]
+[ext_resource type="PackedScene" path="res://packages/011_ai_system/scenes/ai_status_widget.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://packages/003_widget_library/scenes/hydra_button.tscn" id="3"]
+
+[node name="AiConsolePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1020.0
+offset_bottom = 900.0
+mouse_filter = 1
+script = ExtResource("1")
+panel_id = &"ai_console_panel"
+starts_open = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0313725, 0.0509804, 0.97)
+
+[node name="HeaderAccent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 24.0
+offset_right = 34.0
+offset_bottom = 94.0
+mouse_filter = 2
+color = Color(0.839216, 0.666667, 0.282353, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 20.0
+offset_right = 700.0
+offset_bottom = 60.0
+bbcode_enabled = true
+text = "[font_size=30][color=#32d8ff]AI SYSTEM[/color][/font_size]"
+fit_content = true
+scroll_active = false
+
+[node name="Subtitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 62.0
+offset_right = 900.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[color=#6e8794]COGNITIVE COMMAND INTERFACE  //  CHANNEL 011[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="AiStatusWidget" parent="." instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 116.0
+offset_right = 934.0
+offset_bottom = 228.0
+
+[node name="OutputFrame" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 252.0
+offset_right = 966.0
+offset_bottom = 682.0
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.76)
+
+[node name="ConversationOutput" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 76.0
+offset_top = 274.0
+offset_right = 944.0
+offset_bottom = 660.0
+bbcode_enabled = true
+text = "[color=#40515b]AI CONSOLE READY[/color]"
+scroll_active = true
+selection_enabled = true
+
+[node name="PromptInput" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 716.0
+offset_right = 966.0
+offset_bottom = 770.0
+placeholder_text = "ENTER COMMAND OR QUESTION..."
+clear_button_enabled = true
+
+[node name="SendButton" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 798.0
+offset_right = 310.0
+offset_bottom = 862.0
+action_id = &"ai_send"
+text = "EXECUTE"
+
+[node name="CancelButton" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 338.0
+offset_top = 798.0
+offset_right = 594.0
+offset_bottom = 862.0
+action_id = &"ai_cancel"
+text = "CANCEL"
+accent_color = Color(1, 0.309804, 0.384314, 1)
+
+[node name="ErrorLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 622.0
+offset_top = 798.0
+offset_right = 966.0
+offset_bottom = 876.0
+bbcode_enabled = true
+text = "[color=#ff4f62]AI EXECUTION FAILURE[/color]"
+scroll_active = false

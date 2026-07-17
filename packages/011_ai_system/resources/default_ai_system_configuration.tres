@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="AiSystemConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/011_ai_system/resources/ai_system_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+provider_id = &"local_demo"
+model_id = &"hydra-local-demo"
+allow_external_processing = false
+maximum_output_tokens = 1024
+context_window_tokens = 8192
+temperature = 0.2
+top_p = 1.0
+timeout_seconds = 60.0
+system_prompt = "You are HYDRA, a secure residential AI operating system."
+maximum_history_messages = 32
+preserve_system_messages = true
+persist_conversations = false
+redact_sensitive_values = true
+include_device_context = false
