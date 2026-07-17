@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/011_ai_system/scripts/presentation/ai_status_widget.gd" id="1"]
+
+[node name="AiStatusWidget" type="Control"]
+custom_minimum_size = Vector2(880, 112)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 880.0
+offset_bottom = 112.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"ai_status_widget"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.92)
+
+[node name="Indicator" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_top = 16.0
+offset_right = 26.0
+offset_bottom = 96.0
+mouse_filter = 2
+color = Color(0.25098, 0.317647, 0.356863, 1)
+
+[node name="StateLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 12.0
+offset_right = 840.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[color=#32d8ff]AI LINK  //  IDLE[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="ProviderLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 44.0
+offset_right = 840.0
+offset_bottom = 72.0
+text = "PROVIDER  //  UNKNOWN    MODEL  //  UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="TokenLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = 76.0
+offset_right = 840.0
+offset_bottom = 104.0
+text = "TOKENS  //  IN 0    OUT 0    TOTAL 0"
+fit_content = true
+scroll_active = false
