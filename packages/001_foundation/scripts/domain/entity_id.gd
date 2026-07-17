@@ -1,6 +1,6 @@
 class_name EntityId
-extends RefCounted
-## Represents an immutable domain entity identifier.
+extends ValueObject
+## Represents an immutable entity identifier.
 
 
 #region State
@@ -14,15 +14,28 @@ var _value: StringName
 
 func _init(value: StringName) -> void:
 	assert(not value.is_empty(), "EntityId cannot be empty.")
+
 	_value = value
 
 
+## Generates a unique runtime entity identifier.
 static func generate() -> EntityId:
-	return EntityId.new(StringName(UUID.v4()))
+	var generated_value := StringName(
+		"%s-%s-%s"
+		% [
+			Time.get_unix_time_from_system(),
+			Time.get_ticks_usec(),
+			randi(),
+		]
+	)
+
+	return EntityId.new(generated_value)
 
 
+## Creates an entity identifier from text.
 static func from_string(value: String) -> EntityId:
 	var normalized := value.strip_edges()
+
 	assert(not normalized.is_empty(), "EntityId cannot be empty.")
 
 	return EntityId.new(StringName(normalized))
@@ -39,20 +52,12 @@ func get_value() -> StringName:
 func as_string() -> String:
 	return String(_value)
 
-
-func equals(other: EntityId) -> bool:
-	return other != null and _value == other._value
-
-
-func get_hash() -> int:
-	return hash(_value)
-
 #endregion
 
 
-#region Object
+#region ValueObject
 
-func _to_string() -> String:
-	return as_string()
+func _get_atomic_values() -> Array[Variant]:
+	return [_value]
 
 #endregion
