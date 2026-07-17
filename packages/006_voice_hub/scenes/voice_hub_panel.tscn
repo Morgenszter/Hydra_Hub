@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://packages/006_voice_hub/scripts/presentation/voice_hub_panel.gd" id="1"]
+[ext_resource type="PackedScene" path="res://packages/006_voice_hub/scenes/voice_status_widget.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://packages/003_widget_library/scenes/hydra_button.tscn" id="3"]
+
+[node name="VoiceHubPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 920.0
+offset_bottom = 620.0
+mouse_filter = 1
+script = ExtResource("1")
+panel_id = &"voice_hub_panel"
+starts_open = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0313725, 0.0509804, 0.96)
+
+[node name="HeaderAccent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 30.0
+offset_bottom = 88.0
+mouse_filter = 2
+color = Color(0.839216, 0.666667, 0.282353, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 22.0
+offset_right = 660.0
+offset_bottom = 62.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=28][color=#32d8ff]VOICE HUB[/color][/font_size]"
+fit_content = true
+scroll_active = false
+
+[node name="Subtitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 62.0
+offset_right = 760.0
+offset_bottom = 92.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#6e8794]TACTICAL VOICE INTERFACE  //  CHANNEL 006[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="VoiceStatusWidget" parent="." instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 122.0
+offset_right = 688.0
+offset_bottom = 214.0
+
+[node name="TranscriptionFrame" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 242.0
+offset_right = 872.0
+offset_bottom = 450.0
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.72)
+
+[node name="TranscriptionTitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 260.0
+offset_right = 840.0
+offset_bottom = 294.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#d6aa48]TRANSCRIPTION BUFFER[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="TranscriptionLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 68.0
+offset_top = 306.0
+offset_right = 848.0
+offset_bottom = 426.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#40515b]NO TRANSCRIPTION DATA[/color]"
+scroll_active = true
+
+[node name="ListenButton" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 486.0
+offset_right = 304.0
+offset_bottom = 550.0
+action_id = &"voice_listen"
+text = "START LISTENING"
+
+[node name="StopButton" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 332.0
+offset_top = 486.0
+offset_right = 588.0
+offset_bottom = 550.0
+action_id = &"voice_stop"
+text = "STOP / PROCESS"
+accent_color = Color(0.839216, 0.666667, 0.282353, 1)
+
+[node name="CancelButton" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 616.0
+offset_top = 486.0
+offset_right = 872.0
+offset_bottom = 550.0
+action_id = &"voice_cancel"
+text = "CANCEL"
+accent_color = Color(1, 0.309804, 0.384314, 1)
