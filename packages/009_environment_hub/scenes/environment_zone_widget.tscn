@@ -1,0 +1,122 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/009_environment_hub/scripts/presentation/environment_zone_widget.gd" id="1"]
+
+[node name="EnvironmentZoneWidget" type="Control"]
+custom_minimum_size = Vector2(382, 188)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 382.0
+offset_bottom = 188.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"environment_zone_widget"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.9)
+
+[node name="AlertIndicator" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 20.0
+offset_bottom = 174.0
+mouse_filter = 2
+color = Color(0.333333, 0.94902, 0.639216, 1)
+
+[node name="ZoneName" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 250.0
+offset_bottom = 44.0
+bbcode_enabled = true
+text = "[color=#32d8ff]ZONE[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="AlertLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 262.0
+offset_top = 14.0
+offset_right = 364.0
+offset_bottom = 44.0
+text = "NORMAL"
+fit_content = true
+scroll_active = false
+
+[node name="TemperatureTitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 62.0
+offset_right = 150.0
+offset_bottom = 88.0
+text = "TEMP"
+fit_content = true
+scroll_active = false
+
+[node name="Temperature" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 38.0
+offset_top = 92.0
+offset_right = 150.0
+offset_bottom = 126.0
+bbcode_enabled = true
+text = "[color=#32d8ff]N/A[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="HumidityTitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 62.0
+offset_right = 252.0
+offset_bottom = 88.0
+text = "HUMIDITY"
+fit_content = true
+scroll_active = false
+
+[node name="Humidity" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 154.0
+offset_top = 92.0
+offset_right = 252.0
+offset_bottom = 126.0
+bbcode_enabled = true
+text = "[color=#32d8ff]N/A[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="AirTitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 62.0
+offset_right = 350.0
+offset_bottom = 88.0
+text = "AIR"
+fit_content = true
+scroll_active = false
+
+[node name="AirQuality" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 258.0
+offset_top = 92.0
+offset_right = 358.0
+offset_bottom = 126.0
+bbcode_enabled = true
+text = "[color=#d6aa48]N/A[/color]"
+fit_content = true
+scroll_active = false

@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/009_environment_hub/scripts/presentation/environment_metric_widget.gd" id="1"]
+
+[node name="EnvironmentMetricWidget" type="Control"]
+custom_minimum_size = Vector2(240, 110)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 110.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"environment_metric_widget"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.86)
+
+[node name="MetricLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 224.0
+offset_bottom = 38.0
+text = "METRIC"
+fit_content = true
+scroll_active = false
+
+[node name="ValueLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 16.0
+offset_top = 42.0
+offset_right = 224.0
+offset_bottom = 76.0
+bbcode_enabled = true
+text = "[color=#32d8ff]0.0[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="SourceLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 224.0
+offset_bottom = 104.0
+text = "SOURCE  //  UNKNOWN"
+fit_content = true
+scroll_active = false
