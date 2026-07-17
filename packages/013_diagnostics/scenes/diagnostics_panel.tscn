@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/013_diagnostics/scripts/presentation/diagnostics_panel.gd" id="1"]
+
+[node name="DiagnosticsPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 980.0
+offset_bottom = 900.0
+mouse_filter = 1
+script = ExtResource("1")
+panel_id = &"diagnostics_panel"
+starts_open = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0313725, 0.0509804, 0.97)
+
+[node name="HeaderAccent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 24.0
+offset_right = 34.0
+offset_bottom = 94.0
+mouse_filter = 2
+color = Color(0.839216, 0.666667, 0.282353, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 20.0
+offset_right = 680.0
+offset_bottom = 60.0
+bbcode_enabled = true
+text = "[font_size=30][color=#32d8ff]DIAGNOSTICS[/color][/font_size]"
+fit_content = true
+scroll_active = false
+
+[node name="Subtitle" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 62.0
+offset_right = 850.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[color=#6e8794]SYSTEM HEALTH AND TELEMETRY  //  CHANNEL 013[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="HealthIndicator" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 54.0
+offset_top = 116.0
+offset_right = 62.0
+offset_bottom = 152.0
+color = Color(0.25098, 0.317647, 0.356863, 1)
+
+[node name="HealthLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 78.0
+offset_top = 112.0
+offset_right = 490.0
+offset_bottom = 146.0
+text = "SYSTEM HEALTH  //  UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="SummaryLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 510.0
+offset_top = 112.0
+offset_right = 926.0
+offset_bottom = 146.0
+bbcode_enabled = true
+text = "[color=#d6aa48]FINDINGS  //  0    ACTIVE ISSUES  //  0[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="FindingLayer" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ErrorLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 54.0
+offset_top = 824.0
+offset_right = 926.0
+offset_bottom = 884.0
+bbcode_enabled = true
+text = "[color=#ff4f62]DIAGNOSTIC FAILURE[/color]"
+scroll_active = false

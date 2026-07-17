@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PluginManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/015_plugin_sdk/resources/plugin_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+plugin_id = &"example_plugin"
+display_name = "EXAMPLE HYDRA PLUGIN"
+version = "0.1.0"
+author = "HYDRA AI HOME OS Contributors"
+description = "Demonstrates the Plugin SDK lifecycle."
+minimum_hydra_version = "0.1.0"
+minimum_godot_version = "4.7"
+entry_script_path = "res://packages/015_plugin_sdk/demo/example_plugin.gd"
+required_plugins = PackedStringArray()
+requested_capabilities = PackedStringArray("diagnostic_probe")

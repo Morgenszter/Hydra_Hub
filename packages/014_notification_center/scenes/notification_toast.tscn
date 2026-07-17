@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/014_notification_center/scripts/presentation/notification_toast.gd" id="1"]
+
+[node name="NotificationToast" type="Control"]
+custom_minimum_size = Vector2(760, 126)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 760.0
+offset_bottom = 126.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"notification_toast"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.94)
+
+[node name="Indicator" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 18.0
+offset_bottom = 114.0
+mouse_filter = 2
+color = Color(0.196078, 0.847059, 1, 1)
+
+[node name="TitleLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 36.0
+offset_top = 12.0
+offset_right = 586.0
+offset_bottom = 42.0
+bbcode_enabled = true
+text = "[color=#32d8ff]NOTIFICATION[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="PriorityLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 614.0
+offset_top = 12.0
+offset_right = 738.0
+offset_bottom = 42.0
+text = "NORMAL"
+fit_content = true
+scroll_active = false
+
+[node name="MessageLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 36.0
+offset_top = 50.0
+offset_right = 738.0
+offset_bottom = 108.0
+text = "Notification message."
+scroll_active = false

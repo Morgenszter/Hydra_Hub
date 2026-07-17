@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NotificationConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/014_notification_center/resources/notification_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+maximum_history = 500
+default_duration_seconds = 8.0
+automatically_expire_notifications = true
+automatically_acknowledge_expired = false
+play_notification_audio = true
+maximum_visible_toasts = 4
+show_acknowledged_notifications = true

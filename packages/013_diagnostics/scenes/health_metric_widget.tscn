@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/013_diagnostics/scripts/presentation/health_metric_widget.gd" id="1"]
+
+[node name="HealthMetricWidget" type="Control"]
+custom_minimum_size = Vector2(420, 130)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 420.0
+offset_bottom = 130.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"health_metric_widget"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.9)
+
+[node name="Indicator" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 18.0
+offset_bottom = 118.0
+mouse_filter = 2
+color = Color(0.196078, 0.847059, 1, 1)
+
+[node name="TitleLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 12.0
+offset_right = 306.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[color=#32d8ff]DIAGNOSTIC FINDING[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="SeverityLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 316.0
+offset_top = 12.0
+offset_right = 404.0
+offset_bottom = 40.0
+text = "INFO"
+fit_content = true
+scroll_active = false
+
+[node name="MessageLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 50.0
+offset_right = 404.0
+offset_bottom = 114.0
+text = "Diagnostic message."
+scroll_active = false
