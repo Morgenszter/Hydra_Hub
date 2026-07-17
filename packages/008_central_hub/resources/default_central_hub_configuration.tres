@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CentralHubConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/008_central_hub/resources/central_hub_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+default_route_id = &"home"
+restore_last_route = true
+show_disabled_routes = true
+launcher_columns = 3
+launcher_width = 320.0
+launcher_height = 130.0
+launcher_horizontal_gap = 24.0
+launcher_vertical_gap = 20.0

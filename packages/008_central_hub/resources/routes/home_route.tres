@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HubRoute" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/008_central_hub/resources/hub_route.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+route_id = &"home"
+package_id = &"007_home_hub"
+display_name = "HOME HUB"
+description = "Residential command overview."
+scene_path = "res://packages/007_home_hub/scenes/home_hub_panel.tscn"
+sort_order = 10
+accent_color = Color(0.196078, 0.847059, 1, 1)
+enabled = true
+visible = true
