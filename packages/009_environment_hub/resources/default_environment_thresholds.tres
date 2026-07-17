@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnvironmentThresholds" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/009_environment_hub/resources/environment_thresholds.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+minimum_temperature_warning_celsius = 16.0
+minimum_temperature_critical_celsius = 10.0
+maximum_temperature_warning_celsius = 28.0
+maximum_temperature_critical_celsius = 35.0
+minimum_humidity_warning_percent = 30.0
+maximum_humidity_warning_percent = 65.0
+maximum_humidity_critical_percent = 80.0
+co2_warning_ppm = 1000.0
+co2_critical_ppm = 2000.0
+pm25_warning_ug_m3 = 25.0
+pm25_critical_ug_m3 = 50.0
+voc_warning_index = 150.0
+voc_critical_index = 250.0

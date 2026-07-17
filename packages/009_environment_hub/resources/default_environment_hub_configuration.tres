@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnvironmentHubConfiguration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://packages/009_environment_hub/resources/environment_hub_configuration.gd" id="1"]
+[ext_resource type="Resource" path="res://packages/009_environment_hub/resources/default_environment_thresholds.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+refresh_interval_seconds = 3.0
+automatic_refresh_enabled = true
+temperature_decimals = 1
+humidity_decimals = 0
+air_quality_decimals = 0
+show_inactive_zones = true
+thresholds = ExtResource("2")
