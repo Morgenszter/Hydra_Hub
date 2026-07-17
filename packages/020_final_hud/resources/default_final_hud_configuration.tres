@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FinalHudConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/020_final_hud/resources/final_hud_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+default_route_id = &"home"
+restore_last_route = true
+show_boot_transition = true
+scanlines_enabled = true
+vignette_enabled = true
+glow_enabled = true
+scanline_opacity = 0.14
+vignette_strength = 0.42
+debug_overlay_enabled = true

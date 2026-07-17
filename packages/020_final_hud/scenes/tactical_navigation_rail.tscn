@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/020_final_hud/scripts/presentation/tactical_navigation_rail.gd" id="1"]
+
+[node name="TacticalNavigationRail" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 260.0
+offset_bottom = 900.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"tactical_navigation_rail"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.0156863, 0.027451, 0.96)
+
+[node name="Accent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 5.0
+offset_bottom = 900.0
+color = Color(0.839216, 0.666667, 0.282353, 1)
+
+[node name="Header" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = 242.0
+offset_bottom = 58.0
+bbcode_enabled = true
+text = "[color=#32d8ff]MODULE MATRIX[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="ActiveLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_top = 66.0
+offset_right = 242.0
+offset_bottom = 94.0
+bbcode_enabled = true
+text = "[color=#d6aa48]ACTIVE  //  NONE[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="ButtonLayer" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1

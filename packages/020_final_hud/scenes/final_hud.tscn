@@ -1,0 +1,145 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://packages/020_final_hud/scripts/presentation/final_hud_shell.gd" id="1"]
+[ext_resource type="Resource" path="res://packages/020_final_hud/resources/default_final_hud_configuration.tres" id="2"]
+[ext_resource type="PackedScene" path="res://packages/020_final_hud/scenes/system_status_bar.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://packages/020_final_hud/scenes/tactical_navigation_rail.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://packages/020_final_hud/scenes/module_viewport.tscn" id="5"]
+[ext_resource type="Shader" path="res://packages/020_final_hud/shaders/scanlines.gdshader" id="6"]
+[ext_resource type="Shader" path="res://packages/020_final_hud/shaders/vignette.gdshader" id="7"]
+[ext_resource type="PackedScene" path="res://packages/019_debug_tools/scenes/performance_overlay.tscn" id="8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_scanlines"]
+shader = ExtResource("6")
+shader_parameter/opacity = 0.14
+shader_parameter/density = 1080.0
+shader_parameter/speed = 0.35
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+shader = ExtResource("7")
+shader_parameter/strength = 0.42
+shader_parameter/softness = 0.45
+
+[node name="FinalHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+configuration = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00196078, 0.00784314, 0.0117647, 1)
+
+[node name="SystemStatusBar" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 72.0
+
+[node name="NavigationRail" parent="." instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 72.0
+offset_right = 260.0
+offset_bottom = 972.0
+
+[node name="ModuleViewport" parent="." instance=ExtResource("5")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 260.0
+offset_top = 72.0
+offset_right = 1800.0
+offset_bottom = 972.0
+
+[node name="RightTelemetryRail" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 72.0
+offset_right = 1920.0
+offset_bottom = 972.0
+color = Color(0.00392157, 0.0156863, 0.027451, 0.96)
+
+[node name="TelemetryAccent" type="ColorRect" parent="RightTelemetryRail"]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 4.0
+offset_bottom = 900.0
+color = Color(0.839216, 0.666667, 0.282353, 0.7)
+
+[node name="BottomCommandBar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 972.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.00392157, 0.0156863, 0.027451, 0.98)
+
+[node name="BottomAccent" type="ColorRect" parent="BottomCommandBar"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 4.0
+color = Color(0.196078, 0.847059, 1, 0.65)
+
+[node name="CommandHint" type="RichTextLabel" parent="BottomCommandBar"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 34.0
+offset_right = 1500.0
+offset_bottom = 72.0
+bbcode_enabled = true
+text = "[color=#6e8794]HYDRA COMMAND CHANNEL READY  //  SELECT MODULE FROM LEFT MATRIX[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="NotificationOutput" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 790.0
+offset_right = 1770.0
+offset_bottom = 940.0
+bbcode_enabled = true
+text = "[color=#d6aa48]NOTIFICATION[/color]"
+scroll_active = false
+
+[node name="DebugOverlay" parent="." instance=ExtResource("8")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 1370.0
+offset_top = 88.0
+offset_right = 1790.0
+offset_bottom = 226.0
+
+[node name="Scanlines" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_scanlines")
+color = Color(1, 1, 1, 1)
+
+[node name="Vignette" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_vignette")
+color = Color(1, 1, 1, 1)

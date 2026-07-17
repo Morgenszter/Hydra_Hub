@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DebugToolsConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/019_debug_tools/resources/debug_tools_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enabled = true
+console_enabled = true
+performance_overlay_enabled = true
+event_trace_enabled = false
+maximum_log_entries = 2000
+maximum_event_entries = 1000
+performance_refresh_seconds = 0.25
+show_fps = true
+show_memory = true
+show_object_count = true
+show_draw_calls = true
