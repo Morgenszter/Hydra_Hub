@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AutomationConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/012_automation/resources/automation_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enabled = true
+maximum_rules = 64
+maximum_actions_per_rule = 16
+maximum_recursion_depth = 4
+maximum_concurrent_executions = 4
+default_cooldown_seconds = 5.0
+scheduler_tick_seconds = 1.0
+execution_timeout_seconds = 30.0
+maximum_history_records = 500
+persist_history = false
