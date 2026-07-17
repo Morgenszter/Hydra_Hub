@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DeviceHubConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/010_device_hub/resources/device_hub_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+automatic_discovery_enabled = true
+discovery_interval_seconds = 60.0
+automatic_refresh_enabled = true
+refresh_interval_seconds = 5.0
+offline_timeout_seconds = 30.0
+show_offline_devices = true
+show_disabled_devices = true
+card_columns = 3
+card_width = 310.0
+card_height = 164.0
+card_horizontal_gap = 22.0
+card_vertical_gap = 20.0
