@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HubRoute" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/008_central_hub/resources/hub_route.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+route_id = &"voice"
+package_id = &"006_voice_hub"
+display_name = "VOICE HUB"
+description = "Tactical voice control interface."
+scene_path = "res://packages/006_voice_hub/scenes/voice_hub_panel.tscn"
+sort_order = 20
+accent_color = Color(0.839216, 0.666667, 0.282353, 1)
+enabled = true
+visible = true
