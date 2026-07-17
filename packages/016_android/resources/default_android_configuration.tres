@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AndroidConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/016_android/resources/android_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enabled = true
+allow_runtime_permission_requests = false
+allow_background_operation = false
+keep_screen_awake = false
+notification_channel_id = &"hydra_system"
+notification_channel_name = "HYDRA System"
+notification_channel_description = "HYDRA AI HOME OS operational notifications."
+collect_platform_information = true
+expose_device_model = true

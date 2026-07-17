@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="InstallerConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/017_installer/resources/installer_configuration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+installation_root = "user://hydra"
+backup_root = "user://hydra_backups"
+allow_overwrite = false
+create_backups = true
+validate_after_installation = true
+rollback_on_failure = true
+maximum_operations = 10000
+maximum_file_size_bytes = 67108864
