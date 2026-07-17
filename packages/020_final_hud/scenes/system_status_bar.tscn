@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/020_final_hud/scripts/presentation/system_status_bar.gd" id="1"]
+
+[node name="SystemStatusBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 72.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"system_status_bar"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.0156863, 0.027451, 0.98)
+
+[node name="BottomAccent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 68.0
+offset_right = 1920.0
+offset_bottom = 72.0
+color = Color(0.196078, 0.847059, 1, 0.7)
+
+[node name="BrandLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 410.0
+offset_bottom = 54.0
+bbcode_enabled = true
+text = "[font_size=24][color=#32d8ff]HYDRA AI HOME OS[/color][/font_size]"
+fit_content = true
+scroll_active = false
+
+[node name="RouteLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 450.0
+offset_top = 22.0
+offset_right = 850.0
+offset_bottom = 52.0
+text = "MODULE  //  NONE"
+fit_content = true
+scroll_active = false
+
+[node name="HealthLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 900.0
+offset_top = 22.0
+offset_right = 1210.0
+offset_bottom = 52.0
+text = "SYSTEM  //  UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="ConnectionLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 22.0
+offset_right = 1510.0
+offset_bottom = 52.0
+bbcode_enabled = true
+text = "[color=#55f2a3]LINK  //  LOCAL[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="ClockLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1570.0
+offset_top = 22.0
+offset_right = 1896.0
+offset_bottom = 52.0
+text = "0000-00-00  //  00:00:00"
+fit_content = true
+scroll_active = false

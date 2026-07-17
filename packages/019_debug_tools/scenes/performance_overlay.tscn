@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/019_debug_tools/scripts/presentation/performance_overlay.gd" id="1"]
+
+[node name="PerformanceOverlay" type="Control"]
+custom_minimum_size = Vector2(420, 138)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 420.0
+offset_bottom = 138.0
+mouse_filter = 1
+script = ExtResource("1")
+widget_id = &"performance_overlay"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.00392157, 0.0156863, 0.027451, 0.92)
+
+[node name="Accent" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 15.0
+offset_bottom = 128.0
+color = Color(0.196078, 0.847059, 1, 1)
+
+[node name="FpsLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 36.0
+bbcode_enabled = true
+text = "[color=#55f2a3]FPS  //  0[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="MemoryLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 30.0
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 66.0
+text = "MEMORY  //  0.00 MiB"
+fit_content = true
+scroll_active = false
+
+[node name="ObjectsLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 30.0
+offset_top = 70.0
+offset_right = 400.0
+offset_bottom = 96.0
+text = "OBJECTS  //  0    NODES  //  0"
+fit_content = true
+scroll_active = false
+
+[node name="DrawCallsLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 126.0
+text = "DRAW CALLS  //  0"
+fit_content = true
+scroll_active = false
