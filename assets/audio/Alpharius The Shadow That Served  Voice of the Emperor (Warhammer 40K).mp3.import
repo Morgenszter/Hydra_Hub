@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b65ddk0srr4gi"
+path="res://.godot/imported/Alpharius The Shadow That Served  Voice of the Emperor (Warhammer 40K).mp3-05522ec261ff6d48778d4e424c5d4742.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Alpharius The Shadow That Served  Voice of the Emperor (Warhammer 40K).mp3"
+dest_files=["res://.godot/imported/Alpharius The Shadow That Served  Voice of the Emperor (Warhammer 40K).mp3-05522ec261ff6d48778d4e424c5d4742.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
