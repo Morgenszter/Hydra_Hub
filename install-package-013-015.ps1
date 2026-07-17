@@ -4021,11 +4021,6 @@ $files["docs/package-dependencies-013-015.md"] = @'
 015_plugin_sdk
 └── 001_foundation
 '@
-
-=============================================================================
-INSTALLATION
-=============================================================================
-
 Write-Host ""
 Write-Host "HYDRA AI HOME OS" -ForegroundColor Cyan
 Write-Host "Installing packages 013-015..." -ForegroundColor Cyan
