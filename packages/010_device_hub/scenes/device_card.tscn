@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://packages/010_device_hub/scripts/presentation/device_card.gd" id="1"]
+
+[node name="DeviceCard" type="Control"]
+custom_minimum_size = Vector2(310, 164)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 310.0
+offset_bottom = 164.0
+mouse_filter = 0
+script = ExtResource("1")
+widget_id = &"device_card"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.027451, 0.0901961, 0.133333, 0.9)
+
+[node name="Accent" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 18.0
+offset_bottom = 152.0
+mouse_filter = 2
+color = Color(0.333333, 0.94902, 0.639216, 1)
+
+[node name="DeviceName" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 12.0
+offset_right = 286.0
+offset_bottom = 42.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#32d8ff]DEVICE[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="ModelLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 44.0
+offset_right = 286.0
+offset_bottom = 68.0
+mouse_filter = 2
+text = "MANUFACTURER  //  MODEL"
+fit_content = true
+scroll_active = false
+
+[node name="ZoneLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 70.0
+offset_right = 286.0
+offset_bottom = 94.0
+mouse_filter = 2
+text = "ZONE  //  UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="StateLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 212.0
+offset_top = 12.0
+offset_right = 292.0
+offset_bottom = 40.0
+mouse_filter = 2
+text = "UNKNOWN"
+fit_content = true
+scroll_active = false
+
+[node name="PropertyLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 104.0
+offset_right = 286.0
+offset_bottom = 130.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#d6aa48]NO STATE DATA[/color]"
+fit_content = true
+scroll_active = false
+
+[node name="BatteryLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 134.0
+offset_right = 286.0
+offset_bottom = 158.0
+mouse_filter = 2
+text = "SIGNAL  //  N/A"
+fit_content = true
+scroll_active = false
