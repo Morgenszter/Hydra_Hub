@@ -827,8 +827,7 @@ RuntimeHealthBridge
 '@
 
 foreach ($entry in $files.GetEnumerator()) {
-Write-HydraFile -RelativePath $entry.Key
--Content $entry.Value
+    Write-HydraFile -RelativePath $entry.Key -Content $entry.Value
 }
 
 $autoloads = [ordered]@{
