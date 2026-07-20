@@ -1,3 +1,23 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# ==========================
+# HYDRA Auto Ignore
+# ==========================
+
+.godot/
+REPOSITORY_AUDIT/
+reports/
+
+*.zip
+*.7z
+*.rar
+
+*.psd
+*.xcf
+
+*.bak
+*.tmp
+*.log
+
