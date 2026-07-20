@@ -305,7 +305,7 @@ func _configure_corner_fx_nodes() -> void:
 
 func _configure_corner_fx_node(fx: Node, slot: int, path_label: String) -> void:
 	if fx == null:
-		push_warning("HudController: missing node %s. Check exact node name and hierarchy." % path_label)
+		pass # Optional legacy HUD node is not present.
 		return
 
 	if fx is Control:
@@ -346,7 +346,7 @@ func _collect_corner_fxs() -> void:
 
 func _connect_terminal_signals() -> void:
 	if _terminal == null:
-		push_warning("HudController: missing node Ramka_1_Central. Controller will run without terminal binding.")
+		pass # Optional legacy terminal is not present.
 		return
 
 	_connect_terminal_signal(&"boot_started", &"_on_terminal_boot_started")
