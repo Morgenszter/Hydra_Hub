@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c66ttxgh48vp6" path="res://scripts/hud_controller.gd" id="1_m8ws4"]
 [ext_resource type="Texture2D" uid="uid://b6qqcg41h31tw" path="res://assets/texture/HUD/ChatGeneration/Ramki/Tło.png" id="2_r61ac"]
-[ext_resource type="Script" uid="uid://bcpfl4vtoomvg" path="res://frame_scaler.gd" id="3_cyyt0"]
+[ext_resource type="Script" path="res://frame_scaler.gd" id="3_cyyt0"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_5qmfh"]
 

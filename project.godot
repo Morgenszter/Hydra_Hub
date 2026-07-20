@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Hydra Controll Sytem"
-run/main_scene="uid://d3v02p3ik6y8q"
+run/main_scene="res://packages/020_final_hud/scenes/final_hud.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://ngwiohcdge7v"
+buses/default_bus_layout="res://default_bus_layout.tres"
 driver/enable_input=true
 
 [display]
@@ -39,3 +39,5 @@ window/stretch/mode="canvas_items"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+
+
